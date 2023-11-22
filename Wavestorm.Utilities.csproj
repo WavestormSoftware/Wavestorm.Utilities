@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU;x64</Platforms>
+        <AssemblyName>Wavestorm Utilities</AssemblyName>
+        <PlatformTarget>x64</PlatformTarget>
+        <Title>Wavestorm.Utilities</Title>
+        <Authors>Damiantje</Authors>
+        <Company>Wavestorm Software</Company>
+        <Product>Wavestorm.Utilities</Product>
+        <Description>Wavestorm Utilities DLL</Description>
+        <PackageProjectUrl>https://wavestorm.net/</PackageProjectUrl>
+        <PackageReadmeFile>README.MD</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Management" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="README.MD">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+
+</Project>
