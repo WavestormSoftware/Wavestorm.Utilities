@@ -1,31 +1,35 @@
-﻿namespace Wavestorm.Utilities.Wavestorm;
+﻿namespace Wavestorm.Utilities;
 
-public partial class Wavestorm
+public partial class Utilities
 {
-    public class Studio
+    public partial class Wavestorm
     {
-        /// <summary>
-        /// Get the current development version of Wavestorm Studio.
-        /// </summary>
-        /// <returns>The current development version of Wavestorm Engine.</returns>
-        public static Version GetVersion()
+        public class Studio
         {
-            if (Utilities.Network.IsConnectedToInternet())
+            /// <summary>
+            /// Get the current development version of Wavestorm Studio.
+            /// </summary>
+            /// <returns>The current development version of Wavestorm Engine.</returns>
+            public static Version GetVersion()
             {
-                var version = Utilities.Network.GetPlain("https://wavestormgames.net/api/studio/version/version.php").ToString();
-
-                if (version == null)
+                if (Network.Status.IsConnectedToInternet())
                 {
-                    return new Version(0, 0, 0, 0);
+                    var version = Network.Request
+                        .GetPlain("https://wavestormgames.net/api/studio/version/version.php").ToString();
+
+                    if (version == null)
+                    {
+                        return new Version(0, 0, 0, 0);
+                    }
+                    else
+                    {
+                        return new Version(version);
+                    }
                 }
                 else
                 {
-                    return new Version(version);
+                    return new Version(0, 0, 0, 0);
                 }
-            }
-            else
-            {
-                return new Version(0, 0, 0, 0);
             }
         }
     }
