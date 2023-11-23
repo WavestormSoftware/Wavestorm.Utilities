@@ -104,5 +104,3 @@ Please note that both the Engine and Studio methods are currently under developm
 #### *Logging*
 ##### Error
 - **`Log(string message, Exception exception, string file, bool append, bool includeStackTrace, bool includeTimestamp):bool`** - Logs an error message along with details like the exception, file, and additional options.
-##### Debug
-- **`Log(string message, string file, bool append, bool includeTimestamp):bool`** - Logs a debug message along with details like the file and additional options.
