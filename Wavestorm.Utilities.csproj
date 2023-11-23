@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Platforms>AnyCPU;x64</Platforms>
-        <AssemblyName>Wavestorm Utilities</AssemblyName>
+        <AssemblyName>Wavestorm.Utilities</AssemblyName>
         <PlatformTarget>x64</PlatformTarget>
         <Title>Wavestorm.Utilities</Title>
         <Authors>Damiantje</Authors>
