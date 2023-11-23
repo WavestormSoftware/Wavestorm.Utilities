@@ -1,4 +1,6 @@
-﻿namespace Wavestorm.Utilities;
+﻿using System.Text;
+
+namespace Wavestorm.Utilities;
 
 public partial class Utilities
 {
@@ -101,6 +103,17 @@ public partial class Utilities
             }
 
             return false;
+        }
+        
+        /// <summary>
+        /// Check if an input is null or whitespace.
+        /// </summary>
+        /// <typeparam name="T">The type of input to check.</typeparam>
+        /// <param name="input">The input to check.</param>
+        /// <returns>True if the input is null or whitespace, false otherwise.</returns>
+        public static bool Inlist<T>(T item, params T[] list)
+        {
+            return list.Contains(item);
         }
 
         /// <summary>
@@ -382,6 +395,32 @@ public partial class Utilities
         public static DateTime GetTimeInTimezone(string timeZoneId)
         {
             return TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById(timeZoneId));
+        }
+        
+        /// <summary>
+        /// Trims a sub string from a string at the start of the string.
+        /// </summary>
+        /// <param name="text">The string to trim.</param>
+        /// <param name="textToTrim">The sub string to trim from the string.</param>
+        /// <param name="caseInsensitive">Whether or not to trim the sub string case insensitive.</param>
+        public static string TrimStart(string text, string textToTrim, bool caseInsensitive)
+        {            
+            while (true)
+            {
+                var match = text[..textToTrim.Length];
+
+                if (match == textToTrim ||
+                    (caseInsensitive && string.Equals(match, textToTrim, StringComparison.CurrentCultureIgnoreCase)))
+                {
+                    if (text.Length <= match.Length)
+                        text = "";
+                    else
+                        text = text.Substring(textToTrim.Length);
+                }
+                else
+                    break;
+            }
+            return text;
         }
     }
 }
