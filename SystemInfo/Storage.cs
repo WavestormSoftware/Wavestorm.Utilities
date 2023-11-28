@@ -6,6 +6,9 @@ public abstract partial class Utilities
 {
     public partial class SystemInfo
     {
+        /// <summary>
+        /// Provides methods for getting information about the user's storage.
+        /// </summary>
         public static class Storage
         {
             /// <summary>

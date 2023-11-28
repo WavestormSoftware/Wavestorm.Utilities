@@ -7,6 +7,9 @@ public abstract partial class Utilities
 {
     public partial class SystemInfo
     {
+        /// <summary>
+        /// Provides methods for getting information about the user's operating system.
+        /// </summary>
         public static class OS
         {
             /// <summary>

@@ -7,6 +7,9 @@ public abstract partial class Utilities
 {
     public partial class SystemInfo
     {
+        /// <summary>
+        /// Provides methods for getting information about the user's hardware.
+        /// </summary>
         public static class Hardware
         {
             /// TODO: Implement for other platforms
