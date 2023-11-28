@@ -4,6 +4,9 @@ public partial class Utilities
 {
     public partial class Wavestorm
     {
+        /// <summary>
+        /// Provides methods for working with Wavestorm Engine.
+        /// </summary>
         public class Studio
         {
             /// <summary>

@@ -7,6 +7,9 @@ public partial class Utilities
 {
     public partial class Wavestorm
     {
+        /// <summary>
+        /// Provides methods for interacting with Wavestorm Engine.
+        /// </summary>
         public class Engine
         {
             /// <summary>
