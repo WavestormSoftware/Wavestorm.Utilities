@@ -4,6 +4,9 @@ namespace Wavestorm.Utilities;
 
 public abstract partial class Utilities
 {
+    /// <summary>
+    /// Provides methods for logging error data.
+    /// </summary>
     public partial class Logging
     {
         // TODO: Improve.
