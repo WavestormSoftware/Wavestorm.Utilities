@@ -73,15 +73,6 @@ public abstract partial class Utilities
             {
                 return Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyTrademarkAttribute>()?.Trademark;
             }
-            
-            /// <summary>
-            /// Gets the version of the application.
-            /// </summary>
-            /// <returns>The version of the application.</returns>
-            public static string? GetVersion()
-            {
-                return Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyVersionAttribute>()?.Version;
-            }
         }
     }
 }
