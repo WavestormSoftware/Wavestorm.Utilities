@@ -4,6 +4,9 @@ public abstract partial class Utilities
 {
     public partial class General
     {
+        /// <summary>
+        /// Provides methods for serializing and deserializing data.
+        /// </summary>
         public static class Serialization
         {
             /// <summary>

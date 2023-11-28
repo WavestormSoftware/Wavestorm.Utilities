@@ -4,6 +4,9 @@ public abstract partial class Utilities
 {
     public partial class General
     {
+        /// <summary>
+        /// Provides methods for encrypting and decrypting data.
+        /// </summary>
         public static class Cryptography
         {
             /// <summary>

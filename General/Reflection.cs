@@ -4,6 +4,9 @@ public abstract partial class Utilities
 {
     public partial class General
     {
+        /// <summary>
+        /// Provides methods for getting information about the application.
+        /// </summary>
         public static class Reflection
         {
             /// <summary>

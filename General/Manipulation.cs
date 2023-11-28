@@ -4,6 +4,9 @@ public abstract partial class Utilities
 {
     public partial class General
     {
+        /// <summary>
+        /// Provides methods for manipulating data.
+        /// </summary>
         public static class Manipulation
         {
             /// <summary>
