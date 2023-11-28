@@ -47,6 +47,13 @@ Please note that both the Engine and Studio methods are currently under developm
 - **`GetUnixTimestampMilliseconds():long`** - Gets the current Unix timestamp in milliseconds.
 - **`GetTimeInTimezone(string timeZoneId):DateTime`** - Gets the current time in the specified timezone.
 - **`TrimStart(string text, string textToTrim, bool caseInsensitive):string`** - Trims the specified text from the start of a string, with an option for case-insensitive comparison.
+- **`GetApplicationName():string`** - Gets the name of the application.
+- **`GetApplicationVersion():string`** - Gets the version of the application.
+- **`GetCompanyName():string`** - Gets the name of the company.
+- **`GetDescription():string`** - Gets the description of the application.
+- **`GetProductName():string`** - Gets the product name of the application.
+- **`GetTitle():string`** - Gets the title of the application.
+- **`GetTrademark():string`** - Gets the trademark of the application.
 ---
 #### *SystemInfo*
 - **`GetCpuInfo():string`** - Retrieves information about the computer's CPU.
@@ -63,8 +70,6 @@ Please note that both the Engine and Studio methods are currently under developm
 - **`GetUserName():string`** - Gets the name of the currently logged-in user.
 - **`GetComputerName():string`** - Gets the name of the computer.
 - **`GetUserLanguage():string`** - Gets the language of the currently logged-in user.
-- **`GetApplicationName():string`** - Gets the name of the application.
-- **`GetApplicationVersion():string`** - Gets the version of the application.
 ---
 #### *File*
 - **`ReadFile(string path):string?`** - Reads the contents of a text file and returns the content as a string.
@@ -83,6 +88,10 @@ Please note that both the Engine and Studio methods are currently under developm
 - **`GetFileLastAccessTime(string path):DateTime`** - Retrieves the last access time of the file.
 - **`GetFileLastWriteTime(string path):DateTime`** - Retrieves the last write time of the file.
 - **`GetFileMd5(string path):string`** - Calculates and returns the MD5 hash of the file content.
+- **`GetFileSha1(string path):string`** - Calculates and returns the SHA1 hash of the file content.
+- **`GetFileSha256(string path):string`** - Calculates and returns the SHA256 hash of the file content.
+- **`GetFileSha384(string path):string`** - Calculates and returns the SHA384 hash of the file content.
+- **`GetFileSha512(string path):string`** - Calculates and returns the SHA512 hash of the file content.
 - **`ZipDirectory(string directory, string path):bool`** - Compresses an entire directory and its contents into a zip file.
 - **`ExtractZip(string zip, string directory):bool`** - Extracts the contents of a zip file into the specified directory.
 ---
@@ -100,6 +109,7 @@ Please note that both the Engine and Studio methods are currently under developm
 ---
 #### *Services*
 - **`SendDiscordWebhook(string webhookUrl, string username, string avatarUrl, string content):bool`** - Sends a Discord webhook with the specified parameters and returns a boolean indicating success.
+- **`SendDiscordMessage(string botToken, string channelId, string content):bool`** - Sends a Discord message with the specified parameters and returns a boolean indicating success.
 ---
 #### *Logging*
 ##### Error
