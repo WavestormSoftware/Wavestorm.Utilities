@@ -1,8 +1,10 @@
 ﻿namespace Wavestorm.Utilities;
-
 public partial class Utilities
 {
-    public partial class Files
+    /// <summary>
+    /// Provides methods for displaying forms using Twilight, a Wavestorm Software Multi-Platform application framework.
+    /// </summary>
+    public partial class Forms
     {
         public class Twilight
         {
