@@ -6,6 +6,9 @@ public abstract partial class Utilities
 {
     public partial class Files
     {
+        /// <summary>
+        /// Provides methods for performing operations on files.
+        /// </summary>
         public static class Operation
         {
             /// <summary>

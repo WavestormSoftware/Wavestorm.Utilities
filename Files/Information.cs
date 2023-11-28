@@ -6,6 +6,9 @@ public abstract partial class Utilities
 {
     public partial class Files
     {
+        /// <summary>
+        /// Provides methods for getting information about files.
+        /// </summary>
         public static class Information
         {
             /// <summary>
@@ -99,6 +102,104 @@ public abstract partial class Utilities
                     return "";
                 }
             }
+            
+            #region Extra
+            /// <summary>
+            /// Get the SHA1 hash of a file from the specified path. 
+            /// </summary>
+            /// <param name="path">The path to the file.</param>
+            /// <returns>The SHA1 hash of the file.</returns>
+            public static string GetFileSha1(string path)
+            {
+                try
+                {
+                    using (var sha1 = SHA1.Create())
+                    {
+                        using (var stream = File.OpenRead(path))
+                        {
+                            byte[] hashBytes = sha1.ComputeHash(stream);
+                            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    return "";
+                }
+            }
+            
+            /// <summary>
+            /// Get the SHA256 hash of a file from the specified path.
+            /// </summary>
+            /// <param name="path">The path to the file.</param>
+            /// <returns>The SHA256 hash of the file.</returns>
+            public static string GetFileSha256(string path)
+            {
+                try
+                {
+                    using (var sha256 = SHA256.Create())
+                    {
+                        using (var stream = File.OpenRead(path))
+                        {
+                            byte[] hashBytes = sha256.ComputeHash(stream);
+                            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    return "";
+                }
+            }
+            
+            /// <summary>
+            /// Get the SHA384 hash of a file from the specified path.
+            /// </summary>
+            /// <param name="path">The path to the file.</param>
+            /// <returns>The SHA384 hash of the file.</returns>
+            public static string GetFileSha384(string path)
+            {
+                try
+                {
+                    using (var sha384 = SHA384.Create())
+                    {
+                        using (var stream = File.OpenRead(path))
+                        {
+                            byte[] hashBytes = sha384.ComputeHash(stream);
+                            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    return "";
+                }
+            }
+            
+            /// <summary>
+            /// Get the SHA512 hash of a file from the specified path.
+            /// </summary>
+            /// <param name="path">The path to the file.</param>
+            /// <returns>The SHA512 hash of the file.</returns>
+            public static string GetFileSha512(string path)
+            {
+                try
+                {
+                    using (var sha512 = SHA512.Create())
+                    {
+                        using (var stream = File.OpenRead(path))
+                        {
+                            byte[] hashBytes = sha512.ComputeHash(stream);
+                            return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    return "";
+                }
+            }
+            #endregion Extra
         }
     }
 }
