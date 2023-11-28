@@ -6,6 +6,9 @@ public abstract partial class Utilities
 {
     public partial class Network
     {
+        /// <summary>
+        /// Provides methods for getting information about the network.
+        /// </summary>
         public static class Information
         {
             /// <summary>

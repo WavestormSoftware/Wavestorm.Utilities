@@ -8,6 +8,9 @@ public abstract partial class Utilities
 {
     public partial class Network
     {
+        /// <summary>
+        /// Provides methods for making requests to URLs.
+        /// </summary>
         public static class Request
         {
             /// <summary>

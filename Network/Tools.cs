@@ -4,6 +4,9 @@ public abstract partial class Utilities
 {
     public partial class Network
     {
+        /// <summary>
+        /// Provides methods for working with network data.
+        /// </summary>
         public static class Tools
         {
             /// <summary>
